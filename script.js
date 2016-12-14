@@ -7,7 +7,10 @@ function initTable()
 	setTableHeaders("week day:","Pair number","name","teacher","room");
 	
 	setTableLine("Monday",1,"MATAN","my teacher","our room");
-	setTableLine("Monday",2,"MATAN","my teacher","our room");
+	document.body.append("<br>");
+	setTextFieldByName("myName");
+	
+	// setTableLine("Monday",2,"MATAN","my teacher","our room");
 }
 
 function createTable(width)
@@ -77,4 +80,13 @@ function setTableLine(WeekDay,PairNumber,PairName,PairTeacher,PairRoom)
 	// update table object
 	table.append(row);
 	// table.before(document.createElement('hr'));
+}
+
+function setTextFieldByName(yourName)
+{
+	var res = document.createElement('input');
+	res.type="text";
+	res.append("a')");
+	
+	return res;
 }
