@@ -5,26 +5,28 @@
 </head>
 
 <body>
-<h1> There is inputer for TimeTable project. </h1>
-<p>
-<p>
-Наименование группы: (поле)
-<br>
-День недели (выбирать бы его)
-<p><p>
-№ пары
-<p>
-Наименование пары
-<p>
-Преподаватель
-<p>
-Лекторий
-<p>
+	<h1> There is inputer for TimeTable project. </h1>
+	<p>
+	<p>
+	Наименование группы: (поле)
+	<br>
+	День недели (выбирать бы его)
+	<p><p>
+	№ пары
+	<p>
+	Наименование пары
+	<p>
+	Преподаватель
+	<p>
+	Лекторий
+	<p>
 
-<input type=button value = 'Hello' onClick="putTable('Monday')">
-<input type=button value = 'World' onClick="putTable2('Monday')">
-<table border = 1>
-	<caption> Table name ПОНЕДЕЛЬНИК </caption>
+	<form method = "get" action="./processor.php">
+	<input type="button" name='Kek' value = 'Hello' onClick="putTable('Monday')">
+	<input type="button" value = 'World' onClick="putTable2('Monday')">
+	
+	<table border = 1>
+		<caption> Table name ПОНЕДЕЛЬНИК </caption>
 	
 	<th> День недели</th>
 	<th> № пары </th>
@@ -88,7 +90,9 @@
 		</tr>
 	<!-- Конец понедельника -->
 
-</table>
-
+	</table>
+	<input type="text" name="regname"/>
+	<input type="submit" value = 'Sendit'>
+</form>
 </body>
 </html>

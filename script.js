@@ -1,3 +1,25 @@
+var row = document.createElement('tr');
+var table;
+var headers;
+var columns;
+
+// -inputance
+
+function initTable(tableName)
+{
+	createTable(width);
+	setTableHeaders();
+}
+
+function createTable(width)
+{
+	table = setTableWithBorder(width);
+}
+function setTableHeaders()
+{
+	
+}
+//----------------------------------------------------------------------------------------------------------------
 function putTable(tableName)
 {
 	// this function puts table into document
@@ -21,6 +43,10 @@ function setTableWithBorder(width)
 	document.body.append(table);
 	return table;
 }
+function createMyTable()
+{
+	var table = setTableWithBorder(1);
+}
 function putTable2(tableName)
 {
 	/*
@@ -33,12 +59,11 @@ function putTable2(tableName)
 	var head1 = document.createElement('th');
 	head1.append("LOL");
 	
-	var row            = document.createElement('tr');
+	// var row            = document.createElement('tr');
 	
 	putTableRow(table,head1,row,'Monday',1,'Math','We are',21);
 }
-
-function putTableRow(table,head,row,WeekDay,PairNumber,PairName,PairTeacher,PairRoom)
+function setTableLine(WeekDay,PairNumber,PairName,PairTeacher,PairRoom)
 {
 	// create fields
 	var col_WeekDay     = document.createElement('td');
@@ -59,6 +84,10 @@ function putTableRow(table,head,row,WeekDay,PairNumber,PairName,PairTeacher,Pair
 	row.append(col_PairName);
 	row.append(col_PairTeacher);
 	row.append(col_PairRoom);
+}
+function putTableRow(table,head,row,WeekDay,PairNumber,PairName,PairTeacher,PairRoom)
+{
+	setTableLine('Monday',1,'Math',"me",21);	
 	
 	table.append(head);
 	table.append(row);
